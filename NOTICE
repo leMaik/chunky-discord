@@ -1,0 +1,5 @@
+chunky-discord uses the following third-party libraries:
+* Chunky by Jesper Öqvist
+  Chunky is covered by the GNU General Public License, Version 3. See the license file in licenses/chunky.txt
+* discord-rpc by Nicolas Adamoglou
+  discord-rpc is covered by the MIT License. See the license file in licenses/discord-rpc.txt

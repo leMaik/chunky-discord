@@ -1,0 +1,8 @@
+{
+  "name": "Discord Plugin",
+  "author": "leMaik",
+  "main": "de.lemaik.chunky.discord.DiscordPlugin",
+  "version": "1.0.0",
+  "targetVersion": "2.0-beta6",
+  "description": "Discord Rich Presence plugin."
+}

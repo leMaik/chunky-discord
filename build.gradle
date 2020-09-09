@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'de.fuerstenau.buildconfig' version '1.1.8'
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+sourceSets {
+    main {
+        java.srcDir 'src/main/java'
+        resources.srcDir 'src/main/resources'
+    }
+}
+
+buildConfig {
+    packageName = 'de.lemaik.chunky.discord'
+    buildConfigField 'String', 'DISCORD_CLIENT_ID', discordClientId
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+    maven {
+        url 'https://jitpack.io'
+    }
+    maven {
+        url 'https://plugins.gradle.org/m2/'
+    }
+}
+
+dependencies {
+    compileOnly 'se.llbit:chunky-core:2.0-beta6'
+    compile 'com.github.Vatuu:discord-rpc:1.6.2'
+}
+
+jar {
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+}
