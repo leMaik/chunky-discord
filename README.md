@@ -1,10 +1,12 @@
-# Discord Rich Presence Plugin for Chunky
+<img src="https://raw.githubusercontent.com/leMaik/chunky-discord/master/preview.png" align="right" height="252" width="250"/>
+
+# Discord Rich Presence for Chunky
 
 This is a plugin for [Chunky][chunky] that uses [discord-rpc][discord-rpc] to integrate Chunky with Discord to provide _rich presence_, i.e. show your render progress below your name.
 
 ## Installation
 
-Download the latest plugin release for your Chunky version from the [releases page](https://github.com/leMaik/chunky-discord/releases). In the Chunky Launcher, click on _Manage plugins_ and then on _Add_ and select the `.jar` file you just downloaded. Click on `Save` to store the updated configuration, then start Chunky as usual.
+Download the latest plugin release from the [releases page](https://github.com/leMaik/chunky-discord/releases). In the Chunky Launcher, click on _Manage plugins_ and then on _Add_ and select the `.jar` file you just downloaded. Click on `Save` to store the updated configuration, then start Chunky as usual.
 
 **Note:** The Discord integration only works if Discord is already running when starting Chunky.
 
