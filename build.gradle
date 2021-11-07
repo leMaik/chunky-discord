@@ -24,18 +24,18 @@ repositories {
     mavenLocal()
     mavenCentral()
     maven {
-        url 'https://oss.sonatype.org/content/repositories/snapshots/'
-    }
-    maven {
         url 'https://jitpack.io'
     }
     maven {
         url 'https://plugins.gradle.org/m2/'
     }
+    maven {
+        url 'https://repo.lemaik.de/'
+    }
 }
 
 dependencies {
-    compileOnly 'se.llbit:chunky-core:2.0-beta6'
+    compileOnly 'se.llbit:chunky-core:2.4.0'
     compile 'com.github.Vatuu:discord-rpc:1.6.2'
 }
 

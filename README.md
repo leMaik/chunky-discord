@@ -18,7 +18,7 @@ Put this ID into the `gradle.properties` file and then build the project using `
 
 ## License
 
-Copyright 2020 Maik Marschner (leMaik)
+Copyright 2020-2021 Maik Marschner (leMaik)
 
 Permission to modify and redistribute is granted under the terms of the GNU General Public License, Version 3. See the [LICENSE][license] file for the full license.
 

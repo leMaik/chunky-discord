@@ -42,14 +42,14 @@ public class DiscordPlugin implements Plugin {
 
                 try {
                     Thread.sleep(10000);
-                    updateDiscordStatus();
+                    updateDiscordStatus(chunky.getSceneManager().getScene().name());
                 } catch (InterruptedException e) {
                     return;
                 }
             }
         }).start();
 
-        chunky.getRenderController().getRenderer().addRenderListener(new RenderStatusListener() {
+        chunky.getRenderController().getRenderManager().addRenderListener(new RenderStatusListener() {
             @Override
             public void setRenderTime(long l) {
                 rendertime.set(l);
@@ -76,7 +76,7 @@ public class DiscordPlugin implements Plugin {
         });
     }
 
-    private void updateDiscordStatus() {
+    private void updateDiscordStatus(String name) {
         if (ready) {
             if (renderMode.get().equals("RENDERING")) {
                 Duration renderTime = Duration.ofMillis(rendertime.get());
@@ -86,7 +86,7 @@ public class DiscordPlugin implements Plugin {
                         numberFormat.format(totalSpp.get()),
                         numberFormat.format(sps.get())
                 );
-                String details = String.format("Rendering a scene (%dh %dm)",
+                String details = String.format("Rendering " + name + " (%dh %dm)",
                         renderTime.toHours(),
                         renderTime.toMinutes() - renderTime.toHours() * 60
                 );
